@@ -29,7 +29,9 @@ app.get('/weather', (req, res) => {
             temp:result1
         });
      }).catch(function(error){
-        console.log('-----'+error);
+       res.render('weather.hbs',{
+            error:error
+        });
      });
 
 });
